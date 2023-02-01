@@ -2,25 +2,25 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://thymeleaf.org">
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Create User</title>
+    <meta charset="UTF-8">
+    <title>Create User</title>
 </head>
 <body>
 
 <form action="#" th:action="@{/user-create}" th:object="${user}" method="post">
-  <label for="name">First Name</label>
-  </br>
-  <input type="text" th:field="*{name}" id="name" placeholder="Enter your name">
-  </br>
-  <label for="lastname">Last Name</label>
-  </br>
-  <input type="text" th:field="*{lastname}" id="lastname" placeholder="Enter your last name">
-  </br>
-  <label for="age">Age</label>
-  </br>
-  <input type="number" th:field="*{age}" id="age" placeholder="Enter your age">
-  </br>
-  <input type="submit" value="Create User!">
+    <label for="name">First Name</label>
+    </br>
+    <input type="text" th:field="*{name}" id="name" placeholder="Enter your name">
+    </br>
+    <label for="lastname">Last Name</label>
+    </br>
+    <input type="text" th:field="*{lastname}" id="lastname" placeholder="Enter your last name">
+    </br>
+    <label for="age">Age</label>
+    </br>
+    <input type="number" th:field="*{age}" id="age" placeholder="Enter your age">
+    </br>
+    <input type="submit" value="Create User!">
 </form>
 
 </body>

@@ -2,29 +2,29 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://thymeleaf.org">
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Update User</title>
+    <meta charset="UTF-8">
+    <title>Update User</title>
 </head>
 <body>
 
 <form th:method="PUT" action="#" th:action="@{/user-update}" th:object="${user}" method="post">
-  <label for="id">ID</label>
-  </br>
-  <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
-  </br>
-  <label for="name">First Name</label>
-  </br>
-  <input type="text" th:field="*{name}" id="name" placeholder="Enter your name">
-  </br>
-  <label for="lastname">Last Name</label>
-  </br>
-  <input type="text" th:field="*{lastname}" id="lastname" placeholder="Enter your last name">
-  </br>
-  <label for="age">Age</label>
-  </br>
-  <input type="number" th:field="*{age}" id="age" placeholder="Enter your age">
-  </br>
-  <input type="submit" value="Update User!">
+    <label for="id">ID</label>
+    </br>
+    <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
+    </br>
+    <label for="name">First Name</label>
+    </br>
+    <input type="text" th:field="*{name}" id="name" placeholder="Enter your name">
+    </br>
+    <label for="lastname">Last Name</label>
+    </br>
+    <input type="text" th:field="*{lastname}" id="lastname" placeholder="Enter your last name">
+    </br>
+    <label for="age">Age</label>
+    </br>
+    <input type="number" th:field="*{age}" id="age" placeholder="Enter your age">
+    </br>
+    <input type="submit" value="Update User!">
 </form>
 
 </body>
