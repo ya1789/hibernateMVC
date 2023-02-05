@@ -10,7 +10,8 @@ import java.util.List;
 
 @Component
 public class UserDAOImpl implements UserDAO {
-    private final String GET_ALL_USERS = "from User";
+    private static final String GET_ALL_USERS = "from User";
+    public static final String DELETE_USER_BY_ID = "delete from User u where u.id=:id";
     @PersistenceContext
     private EntityManager entityManager;
 
@@ -25,13 +26,26 @@ public class UserDAOImpl implements UserDAO {
     @Override
     public void deleteUser(Long id) {
         try {
-            entityManager.remove(findUserById(id));
+            entityManager.createQuery(DELETE_USER_BY_ID).setParameter("id", id).executeUpdate();
+
         } catch (Exception e) {
             System.out.println("Unable to find user by this id");
         }
         entityManager.flush();
-
     }
+
+
+//    @Transactional
+//    @Override
+//    public void deleteUser(Long id) {
+//        try {
+//            entityManager.remove(findUserById(id));
+//        } catch (Exception e) {
+//            System.out.println("Unable to find user by this id");
+//        }
+//        entityManager.flush();
+//
+//    }
 
     @Transactional
     @Override
